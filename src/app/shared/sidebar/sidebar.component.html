@@ -6,8 +6,7 @@
   <hr class="text-white" />
 
   <div class="list-group list-reset">
-    <a href="#" class="list-group-item list-group-item-action">
-      Dashboard
+    <a href="#" class="list-group-item list-group-item-action" *ngFor="let busqueda of this.historial">{{ busqueda }}
     </a>
   </div>
 </div>
