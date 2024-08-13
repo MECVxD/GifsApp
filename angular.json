@@ -71,18 +71,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "gifsApp:build"
+            "buildTarget": "gifsApp:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "gifsApp:build:production"
+              "buildTarget": "gifsApp:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "gifsApp:build"
+            "buildTarget": "gifsApp:build"
           }
         },
         "test": {
