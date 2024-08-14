@@ -1,4 +1,4 @@
-export interface SearchGifsResponse {
+export interface SearchResponse {
   data: Gif[];
   pagination: Pagination;
   meta: Meta;
@@ -140,11 +140,11 @@ export interface Pagination {
 // Converts JSON strings to/from your types
 // and asserts the results of JSON.parse at runtime
 export class Convert {
-  public static toSearchGifsResponse(json: string): SearchGifsResponse {
+  public static toSearchGifsResponse(json: string): SearchResponse {
     return cast(JSON.parse(json), r('SearchGifsResponse'));
   }
 
-  public static searchGifsResponseToJson(value: SearchGifsResponse): string {
+  public static searchGifsResponseToJson(value: SearchResponse): string {
     return JSON.stringify(uncast(value, r('SearchGifsResponse')), null, 2);
   }
 }
